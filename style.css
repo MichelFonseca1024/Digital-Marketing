@@ -1,0 +1,172 @@
+body,
+ul,
+li,
+p {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-family: "Karla", Arial, sans-serif;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Header*/
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  font-size: 1.2rem;
+}
+.header-principal a.logo {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.header-principal nav {
+  height: 100%;
+}
+
+.header-principal input,
+label {
+  display: none;
+  cursor: pointer;
+  color: #c2c2c2;
+}
+
+.header-principal label {
+  font-size: 1.7rem;
+  border: 2px solid #e2e2e2;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+ul.menu-itens {
+  display: flex;
+  justify-content: space-around;
+}
+
+ul.menu-itens li {
+  padding: 10px;
+}
+.header-principal a {
+  padding: 10px;
+  color: rgb(52, 52, 52);
+}
+
+.menu-itens a:hover {
+  transition: 0.3s ease;
+  color: rgb(138, 139, 138);
+}
+
+li.inscrever-se {
+  background-color: rgb(201, 191, 229);
+  border-radius: 50px;
+}
+
+/*Conteudo*/
+
+.conteudo {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+.intro h1 {
+  font-size: 5rem;
+  color: rgb(29, 55, 75);
+  font-weight: bold;
+}
+.intro h2 {
+  color: rgb(248, 158, 14);
+  font-size: 2.5rem;
+  font-weight: 200;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+
+.intro p {
+  color: rgb(138, 139, 138);
+  margin-bottom: 80px;
+  line-height: 30px;
+}
+
+.intro a {
+  color: rgb(255, 255, 255);
+  background-color: rgb(201, 191, 229);
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 40px;
+  display: inline-block;
+}
+
+.intro-img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  /*Header*/
+  .header-principal {
+    flex-wrap: wrap;
+  }
+
+  .header-principal label {
+    display: initial;
+  }
+
+  .header-principal nav {
+    width: 100%;
+    position: relative;
+    display: none;
+  }
+
+  #btn-menu:checked ~ nav {
+    display: initial;
+  }
+
+  ul.menu-itens {
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 30px;
+  }
+
+  ul.menu-itens li {
+    text-align: center;
+  }
+  li.inscrever-se {
+    background: #fff;
+  }
+  li.inscrever-se a {
+    background-color: rgb(201, 191, 229);
+    border-radius: 50px;
+  }
+
+  /*Conteudo*/
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  .intro {
+    text-align: center;
+    padding: 30px;
+    grid-row: 2/3;
+  }
+  .intro-img {
+    grid-row: 1/2;
+  }
+}
